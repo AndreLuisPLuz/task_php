@@ -1,3 +1,7 @@
+<?php
+    include_once "database/connection.php";
+?>
+
 <html>
 
 <head>
@@ -8,32 +12,32 @@
 
 <body>
     <h1>Gerenciador de Tarefas</h1>
-    <form method="POST">
+    <form action="tasks.php" method="POST">
         <fieldset>
             <legend>Nova tarefa</legend>
             <label>
                 Tarefa:
-                <input type="text" name="nome" />
+                <input type="text" name="name" />
             </label>
             <label>
                 Descrição (Opcional):
-                <textarea name="descricao"></textarea>
+                <textarea name="description"></textarea>
             </label>
             <label>
                 Prazo (Opcional):
-                <input type="text" name="prazo" />
+                <input type="text" name="deadline" />
             </label>
             <fieldset>
                 <legend>Prioridade:</legend>
                 <label>
-                    <input type="radio" name="prioridade" value="1" checked /> Baixa
-                    <input type="radio" name="prioridade" value="2" /> Média
-                    <input type="radio" name="prioridade" value="3" /> Alta
+                    <input type="radio" name="priority" value="1" checked /> Baixa
+                    <input type="radio" name="priority" value="2" /> Média
+                    <input type="radio" name="priority" value="3" /> Alta
                 </label>
             </fieldset>
             <label>
                 Tarefa concluída:
-                <input type="checkbox" name="concluida" value="1" />
+                <input type="checkbox" name="concluded" value="1" />
             </label>
             <input type="submit" value="Cadastrar" />
         </fieldset>
